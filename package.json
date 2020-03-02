@@ -4,12 +4,19 @@
   "description": "Server side rendering project",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch"
   },
-  "author": "",
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ]
+  },
+  "author": "Yofret Rios",
   "license": "ISC",
   "dependencies": {
     "axios": "0.16.2",
@@ -41,5 +48,13 @@
     "webpack-dev-server": "2.8.2",
     "webpack-merge": "4.1.0",
     "webpack-node-externals": "1.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3"
   }
 }

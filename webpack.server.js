@@ -1,7 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base.js');
 const webpackNodeExternals = require('webpack-node-externals');
+const baseConfig = require('./webpack.base.js');
 
 const config = {
   // Inform webpack we are bulding a bundle
