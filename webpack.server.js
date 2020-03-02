@@ -1,6 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
-const baseConfig = require('./wepack.base.js');
+const baseConfig = require('./webpack.base.js');
 
 const config = {
   // Inform webpack we are bulding a bundle
