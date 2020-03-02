@@ -29,6 +29,7 @@
         "ClassDeclaration": false
       }
     }],
+    "react/jsx-fragments": "off",
     "react/jsx-filename-extension": ["error", {
       "extensions": [".js"]
     }],
