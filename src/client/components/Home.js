@@ -4,7 +4,7 @@ const Home = () => (
   <div>
     <div>I'm the Best ASD home component</div>
     <button onClick={() => console.log('Pressed')}>
-      Press Me!
+      Press Me!!!
     </button>
   </div>
 );
