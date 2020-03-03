@@ -1,5 +1,4 @@
 import Home from '../components/Home';
-import Hi from '../components/Hi';
 import UserList from '../components/UserList';
 
 const routes = [
@@ -9,14 +8,8 @@ const routes = [
     exact: true
   },
   {
-    path: '/hi',
-    component: Hi,
-    exact: true,
-  },
-  {
     path: '/users',
-    component: UserList,
-    exact: true,
+    component: UserList
   }
 ];
 

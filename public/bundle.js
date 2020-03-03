@@ -4899,18 +4899,6 @@ eval("\n\n__webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyf
 
 /***/ }),
 
-/***/ "./src/client/components/Hi.js":
-/*!*************************************!*\
-  !*** ./src/client/components/Hi.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Hi = function Hi() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    'Hi Bro!'\n  );\n};\n\nexports.default = Hi;\n\n//# sourceURL=webpack:///./src/client/components/Hi.js?");
-
-/***/ }),
-
 /***/ "./src/client/components/Home.js":
 /*!***************************************!*\
   !*** ./src/client/components/Home.js ***!
@@ -4979,7 +4967,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Home = __webpack_require__(/*! ../components/Home */ \"./src/client/components/Home.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _Hi = __webpack_require__(/*! ../components/Hi */ \"./src/client/components/Hi.js\");\n\nvar _Hi2 = _interopRequireDefault(_Hi);\n\nvar _UserList = __webpack_require__(/*! ../components/UserList */ \"./src/client/components/UserList.js\");\n\nvar _UserList2 = _interopRequireDefault(_UserList);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routes = [{\n  path: '/',\n  component: _Home2.default,\n  exact: true\n}, {\n  path: '/hi',\n  component: _Hi2.default,\n  exact: true\n}, {\n  path: '/users',\n  component: _UserList2.default,\n  exact: true\n}];\n\nexports.default = routes;\n\n//# sourceURL=webpack:///./src/client/routes/routes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Home = __webpack_require__(/*! ../components/Home */ \"./src/client/components/Home.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _UserList = __webpack_require__(/*! ../components/UserList */ \"./src/client/components/UserList.js\");\n\nvar _UserList2 = _interopRequireDefault(_UserList);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routes = [{\n  path: '/',\n  component: _Home2.default,\n  exact: true\n}, {\n  path: '/users',\n  component: _UserList2.default\n}];\n\nexports.default = routes;\n\n//# sourceURL=webpack:///./src/client/routes/routes.js?");
 
 /***/ }),
 
