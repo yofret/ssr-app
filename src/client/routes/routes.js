@@ -1,5 +1,6 @@
 import Home from '../components/Home';
 import Hi from '../components/Hi';
+import UserList from '../components/UserList';
 
 const routes = [
   {
@@ -10,6 +11,11 @@ const routes = [
   {
     path: '/hi',
     component: Hi,
+    exact: true,
+  },
+  {
+    path: '/users',
+    component: UserList,
     exact: true,
   }
 ];
