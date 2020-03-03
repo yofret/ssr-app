@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../actions';
+import { fetchUsers } from '../../actions';
 
 class UserList extends Component {
   constructor(props) {
@@ -37,6 +37,9 @@ UserList.propTypes = {
   fetchUsers: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, {
-  fetchUsers
-})(UserList);
+const loadData = (store) => store.dispatch(fetchUsers());
+
+export default {
+  loadData,
+  component: connect(mapStateToProps, { fetchUsers })(UserList)
+};

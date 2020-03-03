@@ -1,15 +1,15 @@
-import Home from '../components/Home';
-import UserList from '../components/UserList';
+import Home from '../components/pages/Home';
+import UserList from '../components/pages/UserList';
 
 const routes = [
   {
+    ...Home,
     path: '/',
-    component: Home,
     exact: true
   },
   {
+    ...UserList,
     path: '/users',
-    component: UserList
   }
 ];
 
