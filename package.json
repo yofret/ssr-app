@@ -43,7 +43,7 @@
     "react-router-dom": "latest",
     "redux": "^4.0.5",
     "redux-thunk": "2.2.0",
-    "serialize-javascript": "1.4.0",
+    "serialize-javascript": "2.1.1",
     "webpack": "^4.42.0",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2",
