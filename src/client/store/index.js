@@ -8,6 +8,8 @@ import reducers from '../reducers';
  */
 export default () => {
   let middleware = null;
+  const preloaded = window.INITIAL_STATE || {};
+  delete window.INITIAL_STATE;
 
   // Enable thunks middleare and redux dev tools extension only on development mode
   if (process.env.NODE_ENV === 'development') {
@@ -27,5 +29,5 @@ export default () => {
     middleware = applyMiddleware(thunk);
   }
 
-  return createStore(reducers, {}, middleware);
+  return createStore(reducers, preloaded, middleware);
 };
