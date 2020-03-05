@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { renderRoutes } from 'react-router-config';
+import Header from '../components/shared/Header';
 import routes from './routes';
 
 const App = () => (
-  <Fragment>
+  <div>
+    <Header />
     {renderRoutes(routes)}
-  </Fragment>
+  </div>
 );
 
 export default App;

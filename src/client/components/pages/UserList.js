@@ -32,8 +32,12 @@ const mapStateToProps = (state) => ({
   users: state.users,
 });
 
+UserList.defaultProps = {
+  users: []
+};
+
 UserList.propTypes = {
-  users: PropTypes.array.isRequired,
+  users: PropTypes.array,
   fetchUsers: PropTypes.func.isRequired
 };
 

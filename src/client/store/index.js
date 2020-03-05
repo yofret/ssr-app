@@ -1,4 +1,5 @@
 import { applyMiddleware, createStore, compose } from 'redux';
+import axios from 'axios';
 import thunk from 'redux-thunk';
 import reducers from '../reducers';
 
@@ -11,9 +12,13 @@ export default () => {
   const preloaded = window.INITIAL_STATE || {};
   delete window.INITIAL_STATE;
 
+  const axiosInstance = axios.create({
+    baseURL: '/api'
+  });
+
   // Enable thunks middleare and redux dev tools extension only on development mode
   if (process.env.NODE_ENV === 'development') {
-    middleware = applyMiddleware(thunk);
+    middleware = applyMiddleware(thunk.withExtraArgument(axiosInstance));
 
     // Enable redux devtool if browser extension is installed
     /* eslint-disable */
@@ -26,7 +31,7 @@ export default () => {
     /* eslint-enable */
   } else {
     // Just apply thunk middleware
-    middleware = applyMiddleware(thunk);
+    middleware = applyMiddleware(thunk.withExtraArgument(axiosInstance));
   }
 
   return createStore(reducers, preloaded, middleware);
