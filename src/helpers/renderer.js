@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { renderRoutes } from 'react-router-config';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import serialize from 'serialize-javascript';
-import App from '../client/routes';
+import routes from '../client/routes/routes';
 
 export default (req, store) => {
   const content = renderToString(
     <Provider store={store}>
       <StaticRouter location={req.path} context={{}}>
-        <App />
+        <Fragment>
+          {renderRoutes(routes)}
+        </Fragment>
       </StaticRouter>
     </Provider>
   );

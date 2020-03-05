@@ -1,15 +1,21 @@
 import Home from '../components/pages/Home';
 import UserList from '../components/pages/UserList';
+import App from './index';
 
 const routes = [
   {
-    ...Home,
-    path: '/',
-    exact: true
-  },
-  {
-    ...UserList,
-    path: '/users',
+    ...App,
+    routes: [
+      {
+        ...Home,
+        path: '/',
+        exact: true
+      },
+      {
+        ...UserList,
+        path: '/users',
+      }
+    ]
   }
 ];
 

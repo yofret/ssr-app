@@ -1,13 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { renderRoutes } from 'react-router-config';
 import Header from '../components/shared/Header';
-import routes from './routes';
 
-const App = () => (
+const App = ({ route }) => (
   <div>
     <Header />
-    {renderRoutes(routes)}
+    {renderRoutes(route.routes)}
   </div>
 );
 
-export default App;
+App.propTypes = {
+  route: PropTypes.any.isRequired,
+};
+
+export default {
+  component: App
+};
