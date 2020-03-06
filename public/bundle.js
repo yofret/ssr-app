@@ -4911,6 +4911,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
+/***/ "./src/client/components/pages/NotFound.js":
+/*!*************************************************!*\
+  !*** ./src/client/components/pages/NotFound.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar NotFound = function NotFound() {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container m-auto\" },\n    _react2.default.createElement(\n      \"h1\",\n      null,\n      \"Page Not Found!\"\n    )\n  );\n};\n\nexports.default = NotFound;\n\n//# sourceURL=webpack:///./src/client/components/pages/NotFound.js?");
+
+/***/ }),
+
 /***/ "./src/client/components/pages/UserList.js":
 /*!*************************************************!*\
   !*** ./src/client/components/pages/UserList.js ***!
@@ -4991,7 +5003,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _Home = __webpack_require__(/*! ../components/pages/Home */ \"./src/client/components/pages/Home.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _UserList = __webpack_require__(/*! ../components/pages/UserList */ \"./src/client/components/pages/UserList.js\");\n\nvar _UserList2 = _interopRequireDefault(_UserList);\n\nvar _index = __webpack_require__(/*! ./index */ \"./src/client/routes/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routes = [_extends({}, _index2.default, {\n  routes: [_extends({}, _Home2.default, {\n    path: '/',\n    exact: true\n  }), _extends({}, _UserList2.default, {\n    path: '/users'\n  })]\n})];\n\nexports.default = routes;\n\n//# sourceURL=webpack:///./src/client/routes/routes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _Home = __webpack_require__(/*! ../components/pages/Home */ \"./src/client/components/pages/Home.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _UserList = __webpack_require__(/*! ../components/pages/UserList */ \"./src/client/components/pages/UserList.js\");\n\nvar _UserList2 = _interopRequireDefault(_UserList);\n\nvar _NotFound = __webpack_require__(/*! ../components/pages/NotFound */ \"./src/client/components/pages/NotFound.js\");\n\nvar _NotFound2 = _interopRequireDefault(_NotFound);\n\nvar _index = __webpack_require__(/*! ./index */ \"./src/client/routes/index.js\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routes = [_extends({}, _index2.default, {\n  routes: [_extends({}, _Home2.default, {\n    path: '/',\n    exact: true\n  }), _extends({}, _UserList2.default, {\n    path: '/users'\n  }), {\n    component: _NotFound2.default\n  }]\n})];\n\nexports.default = routes;\n\n//# sourceURL=webpack:///./src/client/routes/routes.js?");
 
 /***/ }),
 

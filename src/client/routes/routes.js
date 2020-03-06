@@ -1,5 +1,6 @@
 import Home from '../components/pages/Home';
 import UserList from '../components/pages/UserList';
+import NotFound from '../components/pages/NotFound';
 import App from './index';
 
 const routes = [
@@ -14,6 +15,9 @@ const routes = [
       {
         ...UserList,
         path: '/users',
+      },
+      {
+        component: NotFound,
       }
     ]
   }
