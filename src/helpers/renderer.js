@@ -19,7 +19,10 @@ export default (req, store) => {
 
   return `
     <html>
-      <head></head>
+      <head>
+        <title>React SSR</title>
+        <link rel="stylesheet" type="text/css" href="core.css">
+      </head>
 
       <body>
         <div id="root">${content}</div>

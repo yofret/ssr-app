@@ -1,0 +1,6 @@
+/* Tailwind entry point */
+@import "tailwindcss/base";
+
+/* Tailwind utility clases */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { renderRoutes } from 'react-router-config';
 import Header from '../components/shared/Header';
+import { fetchCurrentUser } from '../actions';
 
 const App = ({ route }) => (
-  <div>
+  <Fragment>
     <Header />
     {renderRoutes(route.routes)}
-  </div>
+  </Fragment>
 );
 
 App.propTypes = {
@@ -15,5 +16,6 @@ App.propTypes = {
 };
 
 export default {
-  component: App
+  component: App,
+  loadData: ({ dispatch }) => dispatch(fetchCurrentUser())
 };

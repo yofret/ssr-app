@@ -1,6 +1,6 @@
 // Start up point for the client side
 import 'babel-polyfill';
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -13,9 +13,7 @@ const store = createStore();
 ReactDom.hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <Fragment>
-        {renderRoutes(routes)}
-      </Fragment>
+      {renderRoutes(routes)}
     </BrowserRouter>
   </Provider>,
   document.querySelector('#root')

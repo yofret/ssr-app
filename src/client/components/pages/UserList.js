@@ -18,7 +18,7 @@ class UserList extends Component {
     const { users } = this.props;
 
     return (
-      <div>
+      <div className="container m-auto px-3">
         <h1>Here is a user list</h1>
         <ul>
           {users.map((user) => <li key={user.id}>{user.name}</li>)}
