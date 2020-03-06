@@ -4907,7 +4907,7 @@ eval("\n\n__webpack_require__(/*! babel-polyfill */ \"./node_modules/babel-polyf
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container m-auto\" },\n    _react2.default.createElement(\n      \"h1\",\n      null,\n      \"Welcome!\"\n    )\n  );\n};\n\nexports.default = {\n  component: Home\n};\n\n//# sourceURL=webpack:///./src/client/components/pages/Home.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container m-auto px-3\" },\n    _react2.default.createElement(\n      \"h1\",\n      null,\n      \"Welcome!\"\n    )\n  );\n};\n\nexports.default = {\n  component: Home\n};\n\n//# sourceURL=webpack:///./src/client/components/pages/Home.js?");
 
 /***/ }),
 
@@ -4919,7 +4919,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar NotFound = function NotFound() {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container m-auto\" },\n    _react2.default.createElement(\n      \"h1\",\n      null,\n      \"Page Not Found!\"\n    )\n  );\n};\n\nexports.default = NotFound;\n\n//# sourceURL=webpack:///./src/client/components/pages/NotFound.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _propTypes = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n\nvar _propTypes2 = _interopRequireDefault(_propTypes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar NotFound = function NotFound(_ref) {\n  var staticContext = _ref.staticContext;\n\n  staticContext.notFound = true;\n\n  return _react2.default.createElement(\n    'div',\n    { className: 'container m-auto px-3' },\n    _react2.default.createElement(\n      'h1',\n      null,\n      'Page Not Found!'\n    )\n  );\n};\n\nNotFound.defaultProps = {\n  staticContext: {}\n};\n\nNotFound.propTypes = {\n  staticContext: _propTypes2.default.object\n};\n\nexports.default = NotFound;\n\n//# sourceURL=webpack:///./src/client/components/pages/NotFound.js?");
 
 /***/ }),
 
