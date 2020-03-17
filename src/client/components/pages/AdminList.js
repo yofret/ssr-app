@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import requireAuth from '../hocs/requireAuth';
@@ -13,6 +14,17 @@ class AdminList extends Component {
 
   componentDidMount() {
     this.props.fetchAdmins();
+  }
+
+  head() {
+    const { admins } = this.props;
+
+    return (
+      <Helmet>
+        <title>{`Admins (${admins.length})`}</title>
+        <meta property="og:title" content="Admins" />
+      </Helmet>
+    );
   }
 
   render() {
