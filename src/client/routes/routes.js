@@ -1,5 +1,6 @@
 import Home from '../components/pages/Home';
 import UserList from '../components/pages/UserList';
+import AdminList from '../components/pages/AdminList';
 import NotFound from '../components/pages/NotFound';
 import App from './index';
 
@@ -15,6 +16,10 @@ const routes = [
       {
         ...UserList,
         path: '/users',
+      },
+      {
+        ...AdminList,
+        path: '/admins',
       },
       {
         component: NotFound,
