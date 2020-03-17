@@ -24,18 +24,33 @@ app.get('*', (req, res) => {
 
   const components = matchRoutes(routes, req.path);
 
-  const promises = components.map(({ route }) => (route.loadData ? route.loadData(store) : null));
+  const promises = components
+    .map(({ route }) => (route.loadData ? route.loadData(store) : null))
+    .map((promise) => {
+      if (promise) {
+        // always resolve inner promise
+        return new Promise((resolve) => {
+          promise.then(resolve).catch(resolve);
+        });
+      }
 
-  Promise.all(promises).then(() => {
-    const context = {};
-    const content = renderer(req, store, context);
+      return null;
+    });
 
-    if (context.notFound) {
-      res.status(404);
-    }
+  Promise.all(promises)
+    .then(() => {
+      const context = {};
+      const content = renderer(req, store, context);
 
-    res.send(content);
-  });
+      if (context.url) {
+        return res.redirect(302, context.url);
+      }
+      if (context.notFound) {
+        return res.status(404);
+      }
+
+      return res.send(content);
+    });
 });
 
 app.listen(3000, () => {
